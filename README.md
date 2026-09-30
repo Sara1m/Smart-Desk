@@ -1,5 +1,6 @@
 # Smart-Desk
 Smart Desk: NLP system that classifies IT support tickets, routes them to the right team, predicts resolution time, and detects anomalous days, with an interactive Streamlit dashboard.
+
 # Smart Desk 🎫
 An intelligent system for automated IT support ticket analysis: NLP classification, team routing, resolution time prediction, and anomaly detection.
 
@@ -23,6 +24,7 @@ IT tickets are sorted and routed by hand, so they sit in the wrong queue and bre
 
 ## Results
 | Task | Model | Result |
+|---|---|---|
 | Issue classification | TF-IDF + Random Forest | Macro F1 0.605 ± 0.107 on unseen messages |
 | Team routing | TF-IDF + Logistic Regression | 57.4% accuracy, 71.6% top-3 accuracy |
 | Text representation | TF-IDF vs Sentence-BERT | No clear winner; TF-IDF chosen |
@@ -44,6 +46,8 @@ streamlit run app.py
 ## Limitations & Next Steps
 - Synthetic data with only 96 unique messages
 - Next: test on real ticket data, fine-tune BERT, add workload and agent features
+
+## Team
 Alhanouf Abdullah Alobaid · Sara Mohammed Alshahrani · Raghad Suliman Albalawi · Wojood Turki Almalki
 
 Saudi Digital Academy · WeCloudData Data Science Bootcamp · 2026
