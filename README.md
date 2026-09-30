@@ -1,6 +1,3 @@
-# Smart-Desk
-Smart Desk: NLP system that classifies IT support tickets, routes them to the right team, predicts resolution time, and detects anomalous days, with an interactive Streamlit dashboard.
-
 # Smart Desk 🎫
 An intelligent system for automated IT support ticket analysis: NLP classification, team routing, resolution time prediction, and anomaly detection.
 
