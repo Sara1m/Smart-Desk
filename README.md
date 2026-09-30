@@ -4,7 +4,7 @@ Smart Desk: NLP system that classifies IT support tickets, routes them to the ri
 # Smart Desk 🎫
 An intelligent system for automated IT support ticket analysis: NLP classification, team routing, resolution time prediction, and anomaly detection.
 
-🔗 **Live dashboard:** [PASTE_STREAMLIT_LINK_HERE](PASTE_STREAMLIT_LINK_HERE)
+🔗 **Live dashboard:** [https://smart-desk.streamlit.app](https://smart-desk.streamlit.app)
 
 ## Business Problem
 IT tickets are sorted and routed by hand, so they sit in the wrong queue and break SLAs.
