@@ -23,20 +23,20 @@ USE_CLEAN_TEXT = True
 # ------------------------------------------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("final_data.csv", parse_dates=["created_at"])
-    daily = pd.read_csv("anomaly_daily_results.csv", parse_dates=["created_at"])
-    by_type = pd.read_csv("anomaly_by_issue_type_results.csv", parse_dates=["created_at"])
-    routing = pd.read_csv("team_routing_results.csv")
+    df = pd.read_csv("data/final_data.csv", parse_dates=["created_at"])
+    daily = pd.read_csv("data/anomaly_daily_results.csv", parse_dates=["created_at"])
+    by_type = pd.read_csv("data/anomaly_by_issue_type_results.csv", parse_dates=["created_at"])
+    routing = pd.read_csv("data/team_routing_results.csv")
     return df, daily, by_type, routing
 
 
 @st.cache_resource
 def load_models():
     return {
-        "tfidf": joblib.load("tfidf.pkl"),
-        "issue_clf": joblib.load("issue_classifier.pkl"),
-        "le_issue": joblib.load("label_encoder.pkl"),
-        "router": joblib.load("team_routing_model.pkl"),
+        "tfidf": joblib.load("models/tfidf.pkl"),
+        "issue_clf": joblib.load("models/issue_classifier.pkl"),
+        "le_issue": joblib.load("models/label_encoder.pkl"),
+        "router": joblib.load("models/team_routing_model.pkl"),
     }
 
 
@@ -277,11 +277,11 @@ elif page == "📈 Model Performance":
     # الصور المحفوظة من النوتبوك: كل صورة في تبويب، وبحجم مناسب
     st.markdown("---")
     st.subheader("Evaluation Charts")
-    images = {"bert_vs_tfidf.png": "BERT vs TF-IDF",
-              "routing_confusion_matrix.png": "Routing Confusion Matrix",
-              "issue_type_confusion_matrix.png": "Issue Type Confusion Matrix",
-              "resolution_time_mutual_info.png": "Resolution Time (MI)",
-              "anomaly_Spiking_issue_type.png": "Anomaly Spikes"}
+    images = {"images/bert_vs_tfidf.png": "BERT vs TF-IDF",
+              "images/routing_confusion_matrix.png": "Routing Confusion Matrix",
+              "images/issue_type_confusion_matrix.png": "Issue Type Confusion Matrix",
+              "images/resolution_time_mutual_info.png": "Resolution Time (MI)",
+              "images/anomaly_Spiking_issue_type.png": "Anomaly Spikes"}
     available = {path: label for path, label in images.items() if os.path.exists(path)}
     IMG_WIDTH = 750   # غيّروا الرقم لتصغير أو تكبير الصور
 

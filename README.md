@@ -3,6 +3,8 @@ An intelligent system for automated IT support ticket analysis: NLP classificati
 
 🔗 **Live dashboard:** [https://smart-desk.streamlit.app](https://smart-desk.streamlit.app)
 
+![Smart Desk Dashboard](images/dashboard.png)
+
 ## Business Problem
 IT tickets are sorted and routed by hand, so they sit in the wrong queue and break SLAs.
 **Question:** How can NLP classify issues, route tickets to the right team, predict resolution times, and detect unusual ticket surges early?
